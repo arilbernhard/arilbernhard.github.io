@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Parsing arguments in Python 2.7"
+date:   2017-03-04 13:22:00 +0100
+categories: snippet python
+---
+
+How to parse command line arguments in Python 2.7 using the `argparse` module:
+
+{% highlight python %}
+import argparse
+parser = argparse.ArgumentParser(prog="example", description="example program")
+parser.add_argument("-p", "--port", type=int,
+    default=8000, help="Port number")
+port = parser.parse_args().port
+{% endhighlight %}
+
+If saved as file `example.py`, run in terminal with `python example.py -p 8080`
+
+It is possible to parse lists of arguments with the `nargs` parameter
+
+{% highlight python %}
+import argparse
+parser = argparse.ArgumentParser(prog="example", description="example program")
+parser.add_argument("-p", "--ports", type=int, nargs='*',help="Port numbers")
+ports = parser.parse_args().ports
+{% endhighlight %}
+
+Running
+`python example.py -p 8080 8081`
+will create a list `ports` containing integers 8080 and 8081
+
+
+**Source and further reading:** [argparse in the Python documentation](https://python.readthedocs.io/en/v2.7.2/library/argparse.html#module-argparse)
