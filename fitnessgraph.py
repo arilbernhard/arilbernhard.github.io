@@ -6,11 +6,11 @@ plt.rc('font', size=40)
 plt.style.use('seaborn-notebook')
 
 
-steps = [8289.0, 9196.0, 8312.0, 12803.0, 14552.0]
-distance = [6.0, 6.9, 6.4, 10.3, 11.1]
-time = [217, 197, 208, 260, 284]
-calories = [2807.0, 2741.0, 2913.0, 3158.0, 3135.0]
-months = ["January", "February", "March", "April", "May"]
+steps = [8289.0, 9196.0, 8312.0, 12803.0, 14552.0, 11921.0, 11768.0, 9867.0, 7478.0, 8648.0]
+distance = [6.0, 6.9, 6.4, 10.3, 11.1, 8.7, 8.0, 6.7, 5.1, 7.0]
+time = [217, 197, 208, 260, 284, 287, 345, 313, 231, 200]
+calories = [2807.0, 2741.0, 2913.0, 3158.0, 3135.0, 3055.0, 3090.0, 2870.0, 2705.0, 2712.0]
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October"]
 
 length_per_step = []
 for i in range(0, len(steps)):
